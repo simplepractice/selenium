@@ -43,19 +43,19 @@ module Selenium
         def for(browser, opts = {})
           case browser
           when :chrome
-            Chrome::Driver.new(opts)
+            Chrome::Driver.new(**opts)
           when :internet_explorer, :ie
-            IE::Driver.new(opts)
+            IE::Driver.new(**opts)
           when :safari
-            Safari::Driver.new(opts)
+            Safari::Driver.new(**opts)
           when :phantomjs
-            PhantomJS::Driver.new(opts)
+            PhantomJS::Driver.new(**opts)
           when :firefox, :ff
-            Firefox::Driver.new(opts)
+            Firefox::Driver.new(**opts)
           when :edge
-            Edge::Driver.new(opts)
+            Edge::Driver.new(**opts)
           when :remote
-            Remote::Driver.new(opts)
+            Remote::Driver.new(**opts)
           else
             raise ArgumentError, "unknown driver: #{browser.inspect}"
           end

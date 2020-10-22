@@ -30,9 +30,9 @@ module Selenium
 
           def new(**opts)
             if marionette?(opts)
-              Firefox::Marionette::Driver.new(opts)
+              Firefox::Marionette::Driver.new(**opts)
             else
-              Firefox::Legacy::Driver.new(opts)
+              Firefox::Legacy::Driver.new(**opts)
             end
           end
 

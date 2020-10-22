@@ -33,7 +33,7 @@ module Selenium
           def initialize(capabilities, session_id, **opts)
             @capabilities = capabilities
             @session_id = session_id
-            super(opts)
+            super(**opts)
           end
 
           def dialect

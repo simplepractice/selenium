@@ -52,7 +52,7 @@ module Selenium
             desired_capabilities = Capabilities.__send__(desired_capabilities)
           end
 
-          bridge = new(opts)
+          bridge = new(**opts)
           capabilities = bridge.create_session(desired_capabilities, opts.delete(:options))
 
           case bridge.dialect
